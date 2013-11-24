@@ -14,7 +14,7 @@
  */
 
 int main() {
-    char bdaddr[18];
+    char bdaddr[PROPERTY_VALUE_MAX];
     int count;
     int fd;
 

@@ -147,6 +147,8 @@ USE_OPENGL_RENDERER := true
 TARGET_DISABLE_TRIPLE_BUFFERING := false
 
 BOARD_ALLOW_EGL_HIBERNATION := true
+BOARD_EGL_WORKAROUND_BUG_10194508 := true
+TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 
 # SELinux
 BOARD_SEPOLICY_DIRS += \
@@ -154,10 +156,7 @@ BOARD_SEPOLICY_DIRS += \
 
 BOARD_SEPOLICY_UNION += \
     bdaddr_read.te \
-    device.te \
-    domain.te \
     file_contexts \
-    mediaserver.te \
     orientationd.te \
     property_contexts \
     pvrsrvinit.te \
