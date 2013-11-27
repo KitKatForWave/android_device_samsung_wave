@@ -62,6 +62,7 @@ TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := ./device/samsung/wave/releasetools/
 TARGET_RELEASETOOL_IMG_FROM_TARGET_SCRIPT := ./device/samsung/wave/releasetools/wave_img_from_target_files
 
 # Camera
+USE_DEVICE_SPECIFIC_CAMERA := true
 USE_CAMERA_STUB := false
 ifeq ($(USE_CAMERA_STUB),false)
 BOARD_CAMERA_LIBRARIES := libcamera
