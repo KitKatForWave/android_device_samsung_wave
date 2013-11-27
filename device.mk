@@ -192,8 +192,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dexopt-data-only=1
 
 # TEST LIBART.SO
-PRODUCT_RUNTIMES := runtime_libart_default
-PRODUCT_RUNTIMES += runtime_libdvm
+#PRODUCT_RUNTIMES := runtime_libart_default
+#PRODUCT_RUNTIMES += runtime_libdvm
+PRODUCT_RUNTIMES := runtime_libdvm_default
 
 # Set default USB interface and default to internal SD as /sdcard
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
