@@ -122,12 +122,14 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/s3c-usbgadget/gadget/l
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_HAS_NO_SELECT_BUTTON := true
-BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/wave/recovery/graphics.c
+# Disable for TWRP
+# BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/wave/recovery/graphics.c
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/wave/recovery/recovery_keys.c
 BOARD_USES_BML_OVER_MTD := true
 BOARD_CUSTOM_BOOTIMG_MK := device/samsung/wave/shbootimg.mk
 TARGET_RECOVERY_FSTAB := device/samsung/wave/fstab.wave
 RECOVERY_FSTAB_VERSION := 2
+PRODUCT_COPY_FILES += device/samsung/wave/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # Boot Animation
 TARGET_BOOTANIMATION_PRELOAD := true
@@ -171,3 +173,15 @@ BOARD_HARDWARE_CLASS := device/samsung/wave/cmhw
 # Include wave specific stuff
 -include device/samsung/wave/Android.mk
 
+#TWRP Flags
+DEVICE_RESOLUTION := 480x800
+TW_NO_REBOOT_BOOTLOADER := true
+TW_INTERNAL_STORAGE_PATH := "/sdcard"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "sdcard"
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+TW_FLASH_FROM_STORAGE := true
+TW_EXCLUDE_SUPERSU := true
+TW_NO_PARTITION_SD_CARD := true
+TW_NO_EXFAT_FUSE := true
+TW_INCLUDE_FB2PNG := true
