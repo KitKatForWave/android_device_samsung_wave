@@ -14,7 +14,9 @@ on init
     mkdir /storage/sdcard1 0700 root root
     symlink /storage/sdcard0 /sdcard
     symlink /storage/sdcard0 /mnt/sdcard
-    # FIXME: Remove emmc?
+    symlink /storage/sdcard1 /ex_sdcard
+    symlink /storage/sdcard1 /mnt/ex_sdcard
+
 
     # We will create our own ril-daemon service in class 'core' because the
     # rild doesn't like being killed. (During device encryption.)
